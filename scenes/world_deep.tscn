@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5b6aumkttpi1"]
+
+[ext_resource type="Script" uid="uid://xts0j5d6gaol" path="res://scripts/interactable.gd" id="1_interact"]
+
+[node name="World" type="Node2D" unique_id=1727498513]
+
+[node name="PlayerSpawn" type="Node2D" parent="." unique_id=1391504255]
+position = Vector2(649, 553)
+
+[node name="NpcPlaceholder" type="Area2D" parent="." unique_id=1875045482]
+position = Vector2(807, 487)
+script = ExtResource("1_interact")
+is_npc = true
+dialogue_id = "placeholder"

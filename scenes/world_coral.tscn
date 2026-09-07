@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dq1hecm40buew"]
+
+[ext_resource type="Script" uid="uid://d1gpqxc1c85qd" path="res://scripts/hiding_spot.gd" id="1_spot"]
+[ext_resource type="Script" uid="uid://xts0j5d6gaol" path="res://scripts/interactable.gd" id="2_interact"]
+
+[node name="World" type="Node2D" unique_id=944277977]
+
+[node name="PlayerSpawn" type="Node2D" parent="." unique_id=820039806]
+position = Vector2(634, 523)
+
+[node name="SpotTransparent" type="StaticBody2D" parent="." unique_id=1989915520]
+position = Vector2(390, 258)
+script = ExtResource("1_spot")
+item_id = "line_transparent"
+size = Vector2(64, 64)
+
+[node name="SpotColorful" type="StaticBody2D" parent="." unique_id=1613775573]
+position = Vector2(621, 297)
+script = ExtResource("1_spot")
+item_id = "line_colorful"
+spot_type = "shell"
+size = Vector2(64, 64)
+
+[node name="SpotThick" type="StaticBody2D" parent="." unique_id=1990922710]
+position = Vector2(896, 358)
+script = ExtResource("1_spot")
+item_id = "line_thick"
+spot_type = "seaweed_2"
+size = Vector2(64, 64)
+
+[node name="SpotFaded" type="StaticBody2D" parent="." unique_id=952911320]
+position = Vector2(405, 509)
+script = ExtResource("1_spot")
+item_id = "line_faded"
+item_is_foreshadow = true
+spot_type = "seaweed_3"
+size = Vector2(64, 64)
+
+[node name="EmptySeaweed1" type="StaticBody2D" parent="." unique_id=893944947]
+position = Vector2(444, 393)
+script = ExtResource("1_spot")
+size = Vector2(64, 64)
+empty_monologue_id = "empty_seaweed_1"
+
+[node name="EmptySeaweed2" type="StaticBody2D" parent="." unique_id=1233952982]
+position = Vector2(808, 221)
+script = ExtResource("1_spot")
+spot_type = "seaweed_2"
+size = Vector2(64, 64)
+empty_monologue_id = "empty_seaweed_2"
+
+[node name="NpcElder" type="Area2D" parent="." unique_id=1072502916]
+position = Vector2(867, 443)
+script = ExtResource("2_interact")
+is_npc = true
+dialogue_id = "elder"

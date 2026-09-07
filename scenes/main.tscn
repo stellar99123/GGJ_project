@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bgkygt6rlgw6l"]
+
+[ext_resource type="Script" uid="uid://dmb6mgqo5e780" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://doh1jkavjtk4l" path="res://scripts/player.gd" id="2_player"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwall"]
+size = Vector2(1059, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwall"]
+size = Vector2(87, 696)
+
+[node name="Main" type="Node2D" unique_id=1496991315]
+script = ExtResource("1_main")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1583871110]
+position = Vector2(640, 560)
+script = ExtResource("2_player")
+
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=1415902394]
+position = Vector2(640, 10)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=1090713596]
+position = Vector2(21.5, 78.5)
+shape = SubResource("RectangleShape2D_hwall")
+
+[node name="WallBottom" type="StaticBody2D" parent="." unique_id=1400872959]
+position = Vector2(640, 710)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom" unique_id=889881700]
+position = Vector2(23, 24)
+shape = SubResource("RectangleShape2D_hwall")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1887121464]
+position = Vector2(10, 360)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=975776899]
+position = Vector2(163.5, 9)
+shape = SubResource("RectangleShape2D_vwall")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1461102422]
+position = Vector2(1270, 360)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1355392309]
+position = Vector2(-120, -2)
+shape = SubResource("RectangleShape2D_vwall")

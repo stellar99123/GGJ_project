@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://xts0j5d6gaol" path="res://scripts/interactable.gd" id="1_interact"]
+
+[node name="World" type="Node2D"]
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(640, 560)
+
+[node name="NpcElder" type="Area2D" parent="."]
+position = Vector2(640, 420)
+script = ExtResource("1_interact")
+is_npc = true
+dialogue_id = "elder_scold"
+
+[node name="Mural" type="Area2D" parent="."]
+position = Vector2(400, 220)
+script = ExtResource("1_interact")
+observable = true
+dialogue_id = "mural"
+
+[node name="ShellContainer" type="Area2D" parent="."]
+position = Vector2(800, 300)
+script = ExtResource("1_interact")
+item_id = "shell_container"
